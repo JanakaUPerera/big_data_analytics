@@ -1,0 +1,56 @@
+services:
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: bigdata-cw-influxdb
+
+    ports:
+      - "8086:8086"
+
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: ${INFLUXDB_INIT_USERNAME}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${INFLUXDB_INIT_PASSWORD}
+      DOCKER_INFLUXDB_INIT_ORG: ${INFLUXDB_INIT_ORG}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUXDB_INIT_BUCKET}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUXDB_INIT_ADMIN_TOKEN}
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "${INFLUX_BROWSER_URL:-http://localhost:8086}/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    restart: unless-stopped
+  
+  wind-ingestor:
+    build:
+      context: ./scripts
+
+    container_name: wind-ingestor
+
+    depends_on:
+      influxdb:
+        condition: service_healthy
+
+    environment:
+      # Container-to-container traffic must use the service name, not
+      # localhost (which INFLUX_URL in .env is set to for host/browser use).
+      INFLUX_URL: ${INFLUX_URL}
+      INFLUX_TOKEN: ${INFLUX_TOKEN}
+      INFLUX_ORG: ${INFLUX_ORG}
+      INFLUX_BUCKET: ${INFLUX_BUCKET}
+      DATA_FILE: ${DATA_FILE}
+      STATION: ${STATION}
+
+    volumes:
+      - ./data:/data:ro
+
+    profiles:
+      - ingestion
+
+volumes:
+  influxdb-data:

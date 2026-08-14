@@ -1,3 +1,7 @@
+# InfluxDB local dev environment
+task1_influxdb/.env
+task1_influxdb/influxdb-data/
+
 # Python
 __pycache__/
 *.pyc
