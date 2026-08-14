@@ -2,6 +2,9 @@
 task1_influxdb/.env
 task1_influxdb/influxdb-data/
 
+# Kafka and Flink local dev environment
+task2_kafka_flink/*.csv
+
 # Python
 __pycache__/
 *.pyc
