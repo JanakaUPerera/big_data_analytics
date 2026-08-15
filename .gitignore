@@ -8,6 +8,7 @@ task2_kafka_flink/*.csv
 # Spark local dev environment
 task3_spark/data/
 task3_spark/output/spark-events/
+docs/
 
 # Python
 __pycache__/
