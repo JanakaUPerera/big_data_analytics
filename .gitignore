@@ -5,6 +5,10 @@ task1_influxdb/influxdb-data/
 # Kafka and Flink local dev environment
 task2_kafka_flink/*.csv
 
+# Spark local dev environment
+task3_spark/data/
+task3_spark/output/spark-events/
+
 # Python
 __pycache__/
 *.pyc
