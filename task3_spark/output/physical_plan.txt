@@ -1,0 +1,168 @@
+== Physical Plan ==
+AdaptiveSparkPlan (23)
++- == Final Plan ==
+   ResultQueryStage (21)
+   +- TakeOrderedAndProject (20)
+      +- TableCacheQueryStage (19), Statistics(sizeInBytes=9.4 MiB, rowCount=6.17E+5)
+         +- InMemoryTableScan (1) (columnarIn=false, columnarOut=true)
+               +- InMemoryRelation (2)
+                     +- AdaptiveSparkPlan (18)
+                     +- == Final Plan ==
+                        ResultQueryStage (14)
+                        +- * HashAggregate (13)
+                           +- ShuffleQueryStage (12), Statistics(sizeInBytes=14.8 MiB, rowCount=6.45E+5)
+                              +- Exchange (11)
+                                 +- * HashAggregate (10)
+                                    +- TableCacheQueryStage (9), Statistics(sizeInBytes=116.0 MiB, rowCount=7.60E+6)
+                                       +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                             +- InMemoryRelation (4)
+                                                   +- * Project (8)
+                                                      +- * Project (7)
+                                                         +- * Filter (6)
+                                                            +- Scan text  (5)
+                     +- == Initial Plan ==
+                        HashAggregate (17)
+                        +- Exchange (16)
+                           +- HashAggregate (15)
+                              +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                    +- InMemoryRelation (4)
+                                          +- * Project (8)
+                                             +- * Project (7)
+                                                +- * Filter (6)
+                                                   +- Scan text  (5)
++- == Initial Plan ==
+   TakeOrderedAndProject (22)
+   +- InMemoryTableScan (1) (columnarIn=false, columnarOut=true)
+         +- InMemoryRelation (2)
+               +- AdaptiveSparkPlan (18)
+               +- == Final Plan ==
+                  ResultQueryStage (14)
+                  +- * HashAggregate (13)
+                     +- ShuffleQueryStage (12), Statistics(sizeInBytes=14.8 MiB, rowCount=6.45E+5)
+                        +- Exchange (11)
+                           +- * HashAggregate (10)
+                              +- TableCacheQueryStage (9), Statistics(sizeInBytes=116.0 MiB, rowCount=7.60E+6)
+                                 +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                       +- InMemoryRelation (4)
+                                             +- * Project (8)
+                                                +- * Project (7)
+                                                   +- * Filter (6)
+                                                      +- Scan text  (5)
+               +- == Initial Plan ==
+                  HashAggregate (17)
+                  +- Exchange (16)
+                     +- HashAggregate (15)
+                        +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                              +- InMemoryRelation (4)
+                                    +- * Project (8)
+                                       +- * Project (7)
+                                          +- * Filter (6)
+                                             +- Scan text  (5)
+
+
+(1) InMemoryTableScan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: [destination#5L, in_degree#200L]
+
+(2) InMemoryRelation
+Arguments: [destination#5L, in_degree#200L], StorageLevel(disk, memory, 1 replicas)
+
+(3) InMemoryTableScan
+Output [1]: [destination#5L]
+Arguments: [destination#5L]
+
+(4) InMemoryRelation
+Arguments: [source#4L, destination#5L], StorageLevel(disk, memory, 1 replicas)
+
+(5) Scan text 
+Output [1]: [value#0]
+Batched: false
+Location: InMemoryFileIndex [file:/opt/spark/data/web-BerkStan.txt]
+PushedFilters: [IsNotNull(value), Not(StringStartsWith(value,#))]
+ReadSchema: struct<value:string>
+
+(6) Filter [codegen id : 1]
+Input [1]: [value#0]
+Condition : (((((isnotnull(value#0) AND NOT StartsWith(value#0, #)) AND NOT (trim(value#0, None) = )) AND (size(split(trim(value#0, None), \s+, -1), false) >= 2)) AND isnotnull(cast(split(trim(value#0, None), \s+, -1)[0] as bigint))) AND isnotnull(cast(split(trim(value#0, None), \s+, -1)[1] as bigint)))
+
+(7) Project [codegen id : 1]
+Output [1]: [split(trim(value#0, None), \s+, -1) AS parts#3]
+Input [1]: [value#0]
+
+(8) Project [codegen id : 1]
+Output [2]: [cast(parts#3[0] as bigint) AS source#4L, cast(parts#3[1] as bigint) AS destination#5L]
+Input [1]: [parts#3]
+
+(9) TableCacheQueryStage
+Output [1]: [destination#5L]
+Arguments: 0
+
+(10) HashAggregate [codegen id : 1]
+Input [1]: [destination#5L]
+Keys [1]: [destination#5L]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#234L]
+Results [2]: [destination#5L, count#235L]
+
+(11) Exchange
+Input [2]: [destination#5L, count#235L]
+Arguments: hashpartitioning(destination#5L, 200), ENSURE_REQUIREMENTS, [plan_id=145]
+
+(12) ShuffleQueryStage
+Output [2]: [destination#5L, count#235L]
+Arguments: 1
+
+(13) HashAggregate [codegen id : 2]
+Input [2]: [destination#5L, count#235L]
+Keys [1]: [destination#5L]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#203L]
+Results [2]: [destination#5L, count(1)#203L AS in_degree#200L]
+
+(14) ResultQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 2
+
+(15) HashAggregate
+Input [1]: [destination#5L]
+Keys [1]: [destination#5L]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#234L]
+Results [2]: [destination#5L, count#235L]
+
+(16) Exchange
+Input [2]: [destination#5L, count#235L]
+Arguments: hashpartitioning(destination#5L, 200), ENSURE_REQUIREMENTS, [plan_id=98]
+
+(17) HashAggregate
+Input [2]: [destination#5L, count#235L]
+Keys [1]: [destination#5L]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#203L]
+Results [2]: [destination#5L, count(1)#203L AS in_degree#200L]
+
+(18) AdaptiveSparkPlan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: isFinalPlan=true
+
+(19) TableCacheQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 0
+
+(20) TakeOrderedAndProject
+Input [2]: [destination#5L, in_degree#200L]
+Arguments: 50, [in_degree#200L DESC NULLS LAST, destination#5L ASC NULLS FIRST], [destination#5L, in_degree#200L]
+
+(21) ResultQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 1
+
+(22) TakeOrderedAndProject
+Input [2]: [destination#5L, in_degree#200L]
+Arguments: 50, [in_degree#200L DESC NULLS LAST, destination#5L ASC NULLS FIRST], [destination#5L, in_degree#200L]
+
+(23) AdaptiveSparkPlan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: isFinalPlan=true
+
+
