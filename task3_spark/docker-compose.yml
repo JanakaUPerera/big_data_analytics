@@ -24,6 +24,7 @@ services:
       - ./data:/opt/spark/data:ro
       - ./jobs:/opt/spark/jobs:ro
       - ./output:/opt/spark/output
+      - ./evidence:/opt/spark/evidence
 
     networks:
       - spark-network
