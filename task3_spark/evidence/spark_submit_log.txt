@@ -1,0 +1,320 @@
+======================================================================
+WEB-BERKSTAN DISTRIBUTED GRAPH ANALYSIS
+======================================================================
+Spark version   : 4.1.2
+Master          : spark://spark-master:7077
+Application ID  : app-20260815112101-0000
+
+Raw DataFrame schema:
+root
+ |-- value: string (nullable = true)
+
+
+Initial partitions:
+4
+
+======================================================================
+DATASET INFORMATION
+======================================================================
+Valid directed edges : 7,600,595
+Partitions           : 4
+
+Sample graph edges:
++------+-----------+
+|source|destination|
++------+-----------+
+|1     |2          |
+|1     |5          |
+|1     |7          |
+|1     |8          |
+|1     |9          |
+|1     |11         |
+|1     |17         |
+|1     |254913     |
+|1     |438238     |
+|254913|255378     |
++------+-----------+
+only showing top 10 rows
+
+Unique destination vertices:
+617,094
+
+======================================================================
+TOP 50 NODES BY IN-DEGREE
+======================================================================
++-----------+---------+
+|destination|in_degree|
++-----------+---------+
+|438238     |84208    |
+|401873     |48205    |
+|184094     |44290    |
+|768        |44101    |
+|927        |44067    |
+|184142     |44041    |
+|184279     |44037    |
+|184332     |44034    |
+|33         |44032    |
+|743        |44022    |
+|210305     |43908    |
+|210376     |43878    |
+|272919     |42828    |
+|66244      |34943    |
+|66909      |34943    |
+|68946      |34943    |
+|68947      |34943    |
+|68948      |34943    |
+|68949      |34943    |
+|77284      |34943    |
+|86237      |34943    |
+|86238      |34943    |
+|86239      |34943    |
+|95551      |34943    |
+|95552      |34943    |
+|96070      |34943    |
+|601656     |30744    |
+|319209     |21177    |
+|571447     |16696    |
+|571448     |16696    |
+|571451     |16686    |
+|570985     |16682    |
+|284306     |14738    |
+|299039     |14732    |
+|299040     |14092    |
+|313077     |14028    |
+|451016     |13734    |
+|316792     |10971    |
+|623254     |9157     |
+|623267     |9078     |
+|477985     |8526     |
+|477172     |8508     |
+|479054     |8508     |
+|481959     |8508     |
+|627015     |8465     |
+|613955     |8430     |
+|623783     |8430     |
+|273278     |7598     |
+|280873     |7595     |
+|417965     |7500     |
++-----------+---------+
+
+
+======================================================================
+PHYSICAL EXECUTION PLAN
+======================================================================
+== Physical Plan ==
+AdaptiveSparkPlan (23)
++- == Final Plan ==
+   ResultQueryStage (21)
+   +- TakeOrderedAndProject (20)
+      +- TableCacheQueryStage (19), Statistics(sizeInBytes=9.4 MiB, rowCount=6.17E+5)
+         +- InMemoryTableScan (1) (columnarIn=false, columnarOut=true)
+               +- InMemoryRelation (2)
+                     +- AdaptiveSparkPlan (18)
+                     +- == Final Plan ==
+                        ResultQueryStage (14)
+                        +- * HashAggregate (13)
+                           +- ShuffleQueryStage (12), Statistics(sizeInBytes=14.8 MiB, rowCount=6.45E+5)
+                              +- Exchange (11)
+                                 +- * HashAggregate (10)
+                                    +- TableCacheQueryStage (9), Statistics(sizeInBytes=116.0 MiB, rowCount=7.60E+6)
+                                       +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                             +- InMemoryRelation (4)
+                                                   +- * Project (8)
+                                                      +- * Project (7)
+                                                         +- * Filter (6)
+                                                            +- Scan text  (5)
+                     +- == Initial Plan ==
+                        HashAggregate (17)
+                        +- Exchange (16)
+                           +- HashAggregate (15)
+                              +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                    +- InMemoryRelation (4)
+                                          +- * Project (8)
+                                             +- * Project (7)
+                                                +- * Filter (6)
+                                                   +- Scan text  (5)
++- == Initial Plan ==
+   TakeOrderedAndProject (22)
+   +- InMemoryTableScan (1) (columnarIn=false, columnarOut=true)
+         +- InMemoryRelation (2)
+               +- AdaptiveSparkPlan (18)
+               +- == Final Plan ==
+                  ResultQueryStage (14)
+                  +- * HashAggregate (13)
+                     +- ShuffleQueryStage (12), Statistics(sizeInBytes=14.8 MiB, rowCount=6.45E+5)
+                        +- Exchange (11)
+                           +- * HashAggregate (10)
+                              +- TableCacheQueryStage (9), Statistics(sizeInBytes=116.0 MiB, rowCount=7.60E+6)
+                                 +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                                       +- InMemoryRelation (4)
+                                             +- * Project (8)
+                                                +- * Project (7)
+                                                   +- * Filter (6)
+                                                      +- Scan text  (5)
+               +- == Initial Plan ==
+                  HashAggregate (17)
+                  +- Exchange (16)
+                     +- HashAggregate (15)
+                        +- InMemoryTableScan (3) (columnarIn=false, columnarOut=true)
+                              +- InMemoryRelation (4)
+                                    +- * Project (8)
+                                       +- * Project (7)
+                                          +- * Filter (6)
+                                             +- Scan text  (5)
+
+
+(1) InMemoryTableScan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: [destination#5L, in_degree#200L]
+
+(2) InMemoryRelation
+Arguments: [destination#5L, in_degree#200L], StorageLevel(disk, memory, 1 replicas)
+
+(3) InMemoryTableScan
+Output [1]: [destination#5L]
+Arguments: [destination#5L]
+
+(4) InMemoryRelation
+Arguments: [source#4L, destination#5L], StorageLevel(disk, memory, 1 replicas)
+
+(5) Scan text 
+Output [1]: [value#0]
+Batched: false
+Location: InMemoryFileIndex [file:/opt/spark/data/web-BerkStan.txt]
+PushedFilters: [IsNotNull(value), Not(StringStartsWith(value,#))]
+ReadSchema: struct<value:string>
+
+(6) Filter [codegen id : 1]
+Input [1]: [value#0]
+Condition : (((((isnotnull(value#0) AND NOT StartsWith(value#0, #)) AND NOT (trim(value#0, None) = )) AND (size(split(trim(value#0, None), \s+, -1), false) >= 2)) AND isnotnull(cast(split(trim(value#0, None), \s+, -1)[0] as bigint))) AND isnotnull(cast(split(trim(value#0, None), \s+, -1)[1] as bigint)))
+
+(7) Project [codegen id : 1]
+Output [1]: [split(trim(value#0, None), \s+, -1) AS parts#3]
+Input [1]: [value#0]
+
+(8) Project [codegen id : 1]
+Output [2]: [cast(parts#3[0] as bigint) AS source#4L, cast(parts#3[1] as bigint) AS destination#5L]
+Input [1]: [parts#3]
+
+(9) TableCacheQueryStage
+Output [1]: [destination#5L]
+Arguments: 0
+
+(10) HashAggregate [codegen id : 1]
+Input [1]: [destination#5L]
+Keys [1]: [destination#5L]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#234L]
+Results [2]: [destination#5L, count#235L]
+
+(11) Exchange
+Input [2]: [destination#5L, count#235L]
+Arguments: hashpartitioning(destination#5L, 200), ENSURE_REQUIREMENTS, [plan_id=145]
+
+(12) ShuffleQueryStage
+Output [2]: [destination#5L, count#235L]
+Arguments: 1
+
+(13) HashAggregate [codegen id : 2]
+Input [2]: [destination#5L, count#235L]
+Keys [1]: [destination#5L]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#203L]
+Results [2]: [destination#5L, count(1)#203L AS in_degree#200L]
+
+(14) ResultQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 2
+
+(15) HashAggregate
+Input [1]: [destination#5L]
+Keys [1]: [destination#5L]
+Functions [1]: [partial_count(1)]
+Aggregate Attributes [1]: [count#234L]
+Results [2]: [destination#5L, count#235L]
+
+(16) Exchange
+Input [2]: [destination#5L, count#235L]
+Arguments: hashpartitioning(destination#5L, 200), ENSURE_REQUIREMENTS, [plan_id=98]
+
+(17) HashAggregate
+Input [2]: [destination#5L, count#235L]
+Keys [1]: [destination#5L]
+Functions [1]: [count(1)]
+Aggregate Attributes [1]: [count(1)#203L]
+Results [2]: [destination#5L, count(1)#203L AS in_degree#200L]
+
+(18) AdaptiveSparkPlan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: isFinalPlan=true
+
+(19) TableCacheQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 0
+
+(20) TakeOrderedAndProject
+Input [2]: [destination#5L, in_degree#200L]
+Arguments: 50, [in_degree#200L DESC NULLS LAST, destination#5L ASC NULLS FIRST], [destination#5L, in_degree#200L]
+
+(21) ResultQueryStage
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: 1
+
+(22) TakeOrderedAndProject
+Input [2]: [destination#5L, in_degree#200L]
+Arguments: 50, [in_degree#200L DESC NULLS LAST, destination#5L ASC NULLS FIRST], [destination#5L, in_degree#200L]
+
+(23) AdaptiveSparkPlan
+Output [2]: [destination#5L, in_degree#200L]
+Arguments: isFinalPlan=true
+
+
+
+======================================================================
+EDGE DISTRIBUTION ACROSS PARTITIONS
+======================================================================
++------------+-------+
+|partition_id|count  |
++------------+-------+
+|0           |2163119|
+|1           |1905925|
+|2           |1905676|
+|3           |1625875|
++------------+-------+
+
+
+======================================================================
+IN-DEGREE DISTRIBUTION STATISTICS
+======================================================================
++-------+------------------+
+|summary|         in_degree|
++-------+------------------+
+|  count|            617094|
+|   mean|12.316754011544433|
+| stddev| 300.0874168302096|
+|    min|                 1|
+|    25%|                 1|
+|    50%|                 2|
+|    75%|                 5|
+|    max|             84208|
++-------+------------------+
+
+
+======================================================================
+EXECUTION SUMMARY
+======================================================================
+Approximate application execution time: 16.00 seconds
+
+Result artefacts written to /opt/spark/output
+
+======================================================================
+CAPTURING CLUSTER EVIDENCE (Master + History Server REST APIs)
+======================================================================
+  saved master_status.json <- http://spark-master:8080/json/
+  History Server indexed app-20260815112101-0000 (attempt 1/12).
+  saved history_jobs.json <- http://spark-history:18080/api/v1/applications/app-20260815112101-0000/jobs
+  saved history_stages_summary.json <- http://spark-history:18080/api/v1/applications/app-20260815112101-0000/stages
+  saved history_stages_detailed.json <- http://spark-history:18080/api/v1/applications/app-20260815112101-0000/stages?details=true
+  saved history_executors.json <- http://spark-history:18080/api/v1/applications/app-20260815112101-0000/executors
+  saved history_environment.json <- http://spark-history:18080/api/v1/applications/app-20260815112101-0000/environment
+Cluster evidence written to /opt/spark/evidence

@@ -1,0 +1,72 @@
+{
+  "url": "spark://spark-master:7077",
+  "workers": [
+    {
+      "id": "worker-20260815112055-172.19.0.4-43255",
+      "host": "172.19.0.4",
+      "port": 43255,
+      "webuiaddress": "http://172.19.0.4:8081",
+      "cores": 2,
+      "coresused": 0,
+      "coresfree": 2,
+      "memory": 2048,
+      "memoryused": 0,
+      "memoryfree": 2048,
+      "resources": {},
+      "resourcesused": {},
+      "resourcesfree": {},
+      "state": "ALIVE",
+      "lastheartbeat": 1786792870697
+    },
+    {
+      "id": "worker-20260815112055-172.19.0.5-43175",
+      "host": "172.19.0.5",
+      "port": 43175,
+      "webuiaddress": "http://172.19.0.5:8081",
+      "cores": 2,
+      "coresused": 0,
+      "coresfree": 2,
+      "memory": 2048,
+      "memoryused": 0,
+      "memoryfree": 2048,
+      "resources": {},
+      "resourcesused": {},
+      "resourcesfree": {},
+      "state": "ALIVE",
+      "lastheartbeat": 1786792870707
+    }
+  ],
+  "aliveworkers": 2,
+  "cores": 4,
+  "coresused": 0,
+  "memory": 4096,
+  "memoryused": 0,
+  "resources": [
+    {},
+    {}
+  ],
+  "resourcesused": [
+    {},
+    {}
+  ],
+  "activeapps": [],
+  "completedapps": [
+    {
+      "id": "app-20260815112101-0000",
+      "starttime": 1786792861516,
+      "name": "Web-BerkStan-InDegree-Analysis",
+      "cores": 4,
+      "user": "spark",
+      "memoryperexecutor": 1024,
+      "memoryperslave": 1024,
+      "resourcesperexecutor": [],
+      "resourcesperslave": [],
+      "submitdate": "Sat Aug 15 11:21:01 UTC 2026",
+      "state": "FINISHED",
+      "duration": 18390
+    }
+  ],
+  "activedrivers": [],
+  "completeddrivers": [],
+  "status": "ALIVE"
+}

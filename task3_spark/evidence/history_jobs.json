@@ -1,0 +1,566 @@
+[
+  {
+    "jobId": 20,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:316",
+    "submissionTime": "2026-08-15T11:21:19.636GMT",
+    "completionTime": "2026-08-15T11:21:19.831GMT",
+    "stageIds": [
+      36,
+      37,
+      38
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-9"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 205,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 204,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 2,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 19,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:316",
+    "submissionTime": "2026-08-15T11:21:18.938GMT",
+    "completionTime": "2026-08-15T11:21:19.615GMT",
+    "stageIds": [
+      34,
+      35
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-9"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 18,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:18.548GMT",
+    "completionTime": "2026-08-15T11:21:18.899GMT",
+    "stageIds": [
+      32,
+      33,
+      31
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-8"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 205,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 204,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 2,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 17,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:16.760GMT",
+    "completionTime": "2026-08-15T11:21:18.519GMT",
+    "stageIds": [
+      29,
+      30
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-8"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 16,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:303",
+    "submissionTime": "2026-08-15T11:21:16.622GMT",
+    "completionTime": "2026-08-15T11:21:16.656GMT",
+    "stageIds": [
+      26,
+      27,
+      28
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-7"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 6,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 5,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 2,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 15,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:303",
+    "submissionTime": "2026-08-15T11:21:16.575GMT",
+    "completionTime": "2026-08-15T11:21:16.599GMT",
+    "stageIds": [
+      24,
+      25
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-7"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 5,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 14,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:303",
+    "submissionTime": "2026-08-15T11:21:16.518GMT",
+    "completionTime": "2026-08-15T11:21:16.571GMT",
+    "stageIds": [
+      22,
+      23
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-7"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 5,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 13,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:303",
+    "submissionTime": "2026-08-15T11:21:16.432GMT",
+    "completionTime": "2026-08-15T11:21:16.493GMT",
+    "stageIds": [
+      21
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-7"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 4,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 4,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 4,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 12,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:16.362GMT",
+    "completionTime": "2026-08-15T11:21:16.398GMT",
+    "stageIds": [
+      19,
+      20
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-6"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 5,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 11,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:16.210GMT",
+    "completionTime": "2026-08-15T11:21:16.312GMT",
+    "stageIds": [
+      18
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-6"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 4,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 4,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 4,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 10,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:264",
+    "submissionTime": "2026-08-15T11:21:15.743GMT",
+    "completionTime": "2026-08-15T11:21:16.094GMT",
+    "stageIds": [
+      16,
+      17
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-5"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 9,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:15.188GMT",
+    "completionTime": "2026-08-15T11:21:15.664GMT",
+    "stageIds": [
+      14,
+      15
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-4"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 8,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:15.021GMT",
+    "completionTime": "2026-08-15T11:21:15.063GMT",
+    "stageIds": [
+      11,
+      12,
+      13
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-3"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 205,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 204,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 2,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 7,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:14.505GMT",
+    "completionTime": "2026-08-15T11:21:15.006GMT",
+    "stageIds": [
+      9,
+      10
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-3"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 6,
+    "name": "count at NativeMethodAccessorImpl.java:0",
+    "submissionTime": "2026-08-15T11:21:13.039GMT",
+    "completionTime": "2026-08-15T11:21:14.478GMT",
+    "stageIds": [
+      7,
+      8
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-3"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 204,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 200,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 200,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 5,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:12.460GMT",
+    "completionTime": "2026-08-15T11:21:13.010GMT",
+    "stageIds": [
+      6
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-3"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 4,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 4,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 4,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 4,
+    "name": "collect at /opt/spark/jobs/berkstan_analysis.py:222",
+    "submissionTime": "2026-08-15T11:21:12.263GMT",
+    "completionTime": "2026-08-15T11:21:12.306GMT",
+    "stageIds": [
+      5
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-2"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 1,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 3,
+    "name": "showString at NativeMethodAccessorImpl.java:0",
+    "submissionTime": "2026-08-15T11:21:12.138GMT",
+    "completionTime": "2026-08-15T11:21:12.207GMT",
+    "stageIds": [
+      4
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-1"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 1,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 2,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:11.940GMT",
+    "completionTime": "2026-08-15T11:21:12.048GMT",
+    "stageIds": [
+      2,
+      3
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-0"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 5,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 1,
+    "numSkippedTasks": 4,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 1,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 1,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 1,
+    "name": "$anonfun$withThreadLocalCaptured$2 at CompletableFuture.java:1768",
+    "submissionTime": "2026-08-15T11:21:11.693GMT",
+    "completionTime": "2026-08-15T11:21:11.905GMT",
+    "stageIds": [
+      1
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-0"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 4,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 4,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 4,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  },
+  {
+    "jobId": 0,
+    "name": "count at NativeMethodAccessorImpl.java:0",
+    "submissionTime": "2026-08-15T11:21:05.902GMT",
+    "completionTime": "2026-08-15T11:21:11.615GMT",
+    "stageIds": [
+      0
+    ],
+    "jobTags": [
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181",
+      "spark-session-b9124d9b-102d-4cd0-a393-3ad67630a181-execution-root-id-0"
+    ],
+    "status": "SUCCEEDED",
+    "numTasks": 4,
+    "numActiveTasks": 0,
+    "numCompletedTasks": 4,
+    "numSkippedTasks": 0,
+    "numFailedTasks": 0,
+    "numKilledTasks": 0,
+    "numCompletedIndices": 4,
+    "numActiveStages": 0,
+    "numCompletedStages": 1,
+    "numSkippedStages": 0,
+    "numFailedStages": 0,
+    "killedTasksSummary": {}
+  }
+]
