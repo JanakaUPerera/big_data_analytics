@@ -1,9 +1,9 @@
 Spark version              : 4.1.2
 Master                     : spark://spark-master:7077
-Application ID             : app-20260815090959-0000
+Application ID             : app-20260815112101-0000
 Application name           : Web-BerkStan-InDegree-Analysis
 Default parallelism        : 4
 Valid directed edges       : 7600595
 Unique destination vertices: 617094
 Edge partitions            : 4
-Driver execution time (s)  : 16.88
+Driver execution time (s)  : 16.00
