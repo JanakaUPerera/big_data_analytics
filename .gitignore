@@ -10,6 +10,12 @@ task3_spark/data/
 task3_spark/output/spark-events/
 docs/
 
+# Neo4j local dev environment
+task4_neo4j/data/
+task4_neo4j/logs/
+task4_neo4j/import/
+task4_neo4j/neo4j-data/
+
 # Python
 __pycache__/
 *.pyc
