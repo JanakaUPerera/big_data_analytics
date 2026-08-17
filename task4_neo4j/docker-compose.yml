@@ -1,0 +1,38 @@
+services:
+
+  neo4j:
+    image: neo4j:2026.06.0-community
+    container_name: coursework-neo4j
+    hostname: neo4j
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    environment:
+      NEO4J_AUTH: neo4j/coursework12345
+
+    volumes:
+      - ./neo4j-data:/data
+      - ./import:/var/lib/neo4j/import
+      - ./logs:/logs
+
+    restart: unless-stopped
+
+  patent-preprocessor:
+    image: python:3.12-slim
+    container_name: patent-preprocessor
+
+    working_dir: /app
+
+    volumes:
+      - ./data:/data:ro
+      - ./import:/import
+      - ./scripts:/app:ro
+
+    command:
+      - python
+      - prepare_patents.py
+
+    profiles:
+      - preparation
