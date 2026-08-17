@@ -1,0 +1,29 @@
+Task 4 — Neo4j Patent Citation Graph Results
+
+Dataset subset:
+- 5,000 patent citation relationships
+
+Graph size:
+- Patent nodes: 5,912
+- CITES relationships: 5,000
+
+Connectivity:
+- Source-only patents: 967
+- Cited-only patents: 4,945
+- Patents with both incoming and outgoing citations: 0
+- Isolated patents: 0
+
+Degree statistics:
+- Average out-degree: 0.8457
+- Average in-degree: 0.8457
+- Maximum out-degree: 23
+- Maximum in-degree: 4
+
+Graph density:
+- 0.0001430786
+
+Key observations:
+- The graph is very sparse.
+- No two-hop citation paths exist in the selected 5,000-record subset.
+- Most cited patents have an in-degree of 1.
+- Only a small number of source patents have high out-degree.
