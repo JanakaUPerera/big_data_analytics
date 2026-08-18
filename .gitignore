@@ -1,5 +1,6 @@
 # InfluxDB local dev environment
 task1_influxdb/.env
+task1_influxdb/.cache.sqlite
 task1_influxdb/influxdb-data/
 
 # Kafka and Flink local dev environment
