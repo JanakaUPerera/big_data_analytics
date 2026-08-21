@@ -1,0 +1,84 @@
+services:
+
+  kafka:
+    image: apache/kafka:4.2.0
+    container_name: coursework-kafka
+
+    ports:
+      - "9192:9094"
+
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: INTERNAL://:9092,EXTERNAL://:9094,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://localhost:9192
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+    networks:
+      - streaming-network
+
+
+  jobmanager:
+    image: flink:2.1.0-scala_2.12-java21
+    container_name: coursework-flink-jobmanager
+
+    ports:
+      - "8184:8081"
+
+    command: jobmanager
+
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+
+    networks:
+      - streaming-network
+
+  kafka-ui:
+    image: ghcr.io/kafbat/kafka-ui:latest
+    container_name: coursework-kafka-ui
+
+    ports:
+      - "8185:8080"
+
+    depends_on:
+      - kafka
+
+    environment:
+      KAFKA_CLUSTERS_0_NAME: coursework-kafka
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      DYNAMIC_CONFIG_ENABLED: "true"
+
+    networks:
+      - streaming-network
+
+  taskmanager:
+    image: flink:2.1.0-scala_2.12-java21
+    container_name: coursework-flink-taskmanager
+
+    depends_on:
+      - jobmanager
+
+    command: taskmanager
+
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 3
+
+    networks:
+      - streaming-network
+
+
+networks:
+  streaming-network:
+    driver: bridge
