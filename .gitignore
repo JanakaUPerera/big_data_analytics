@@ -4,7 +4,8 @@ task1_influxdb/.cache.sqlite
 task1_influxdb/influxdb-data/
 
 # Kafka and Flink local dev environment
-task2_kafka_flink/*.csv
+task2_kafka_flink/data/*.csv
+task2_kafka_flink/flink_job/target/
 
 # Spark local dev environment
 task3_spark/data/
