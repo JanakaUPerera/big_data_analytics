@@ -9,7 +9,6 @@ from influxdb_client import Point
 CSV_PATH = ""
     
 INFLUX_URL = ""
-INFLUX_BROWSER_URL = ""
 INFLUX_ORG = ""
 INFLUX_BUCKET = ""
 INFLUX_TOKEN = ""
@@ -38,18 +37,18 @@ BATCH_SIZE = 5000
 def initiating_influxdb():
     load_dotenv()
 
-    global CSV_PATH, INFLUX_BROWSER_URL, INFLUX_ORG, INFLUX_BUCKET, INFLUX_TOKEN
+    global CSV_PATH, INFLUX_URL, INFLUX_ORG, INFLUX_BUCKET, INFLUX_TOKEN
 
     CSV_PATH = "data/alaska_fairbanks_airports_hourly_climate.csv"
 
-    INFLUX_BROWSER_URL = os.getenv("INFLUX_BROWSER_URL")
+    INFLUX_URL = os.getenv("INFLUX_URL")
     INFLUX_ORG = os.getenv("INFLUX_ORG")
     INFLUX_BUCKET = os.getenv("INFLUX_BUCKET")
     INFLUX_TOKEN = os.getenv("INFLUX_TOKEN")
 
     print("Starting InfluxDB ingestion")
     print("CSV:", CSV_PATH)
-    print("Influx Browser URL:", INFLUX_BROWSER_URL)
+    print("Influx URL:", INFLUX_URL)
     print("Organization:", INFLUX_ORG)
     print("Bucket:", INFLUX_BUCKET)
     print("Token loaded:", bool(INFLUX_TOKEN))
@@ -104,7 +103,7 @@ def add_location_metadata(df: pd.DataFrame) :
 
 def add_influxdb_client_connection() -> tuple[InfluxDBClient, WriteApi]:
     client = InfluxDBClient(
-        url=INFLUX_BROWSER_URL,
+        url=INFLUX_URL,
         token=INFLUX_TOKEN,
         org=INFLUX_ORG
     )

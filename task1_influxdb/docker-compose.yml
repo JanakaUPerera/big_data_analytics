@@ -25,3 +25,20 @@ services:
       retries: 5
 
     restart: unless-stopped
+
+  python:
+    image: python:3.12-slim
+    container_name: task1-python
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      INFLUX_URL: ${INFLUX_URL}
+      INFLUX_ORG: ${INFLUX_ORG}
+      INFLUX_BUCKET: ${INFLUX_BUCKET}
+      INFLUX_TOKEN: ${INFLUX_TOKEN}
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    command: sh -c "pip install --disable-pip-version-check -q -r requirements.txt && tail -f /dev/null"
+    restart: unless-stopped

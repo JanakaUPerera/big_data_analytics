@@ -11,7 +11,7 @@ from datetime import date, datetime, timedelta
 
 import openmeteo_requests
 import pandas as pd
-import requests_cache
+import requests
 from dotenv import load_dotenv
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -68,8 +68,8 @@ def parse_arguments() -> tuple[date, date]:
 
 
 def fetch_climate_data(start_date: date, end_date: date) -> pd.DataFrame:
-    cache_session = requests_cache.CachedSession(".cache", expire_after=-1)
-    retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
+    session = requests.Session()
+    retry_session = retry(session, retries=5, backoff_factor=0.2)
     openmeteo = openmeteo_requests.Client(session=retry_session)
     response = openmeteo.weather_api(
         ARCHIVE_URL,
@@ -88,7 +88,7 @@ def fetch_climate_data(start_date: date, end_date: date) -> pd.DataFrame:
         "date": pd.date_range(
             start=pd.to_datetime(hourly.Time(), unit="s", utc=True),
             end=pd.to_datetime(hourly.TimeEnd(), unit="s", utc=True),
-            freq=pd.Timedelta(seconds=hourly.Interval()),
+            freq=pd.Timedelta(seconds=int(hourly.Interval())),
             inclusive="left",
         )
     }
@@ -134,12 +134,12 @@ def create_point(row) -> Point:
 
 def write_data(dataframe: pd.DataFrame) -> None:
     load_dotenv()
-    influx_url = os.getenv("INFLUX_BROWSER_URL")
+    influx_url = os.getenv("INFLUX_URL")
     influx_org = os.getenv("INFLUX_ORG")
     influx_bucket = os.getenv("INFLUX_BUCKET")
     influx_token = os.getenv("INFLUX_TOKEN")
     if not all([influx_url, influx_org, influx_bucket, influx_token]):
-        raise ValueError("Set INFLUX_BROWSER_URL, INFLUX_ORG, INFLUX_BUCKET, and INFLUX_TOKEN in .env")
+        raise ValueError("Set INFLUX_URL, INFLUX_ORG, INFLUX_BUCKET, and INFLUX_TOKEN in .env")
 
     with InfluxDBClient(url=influx_url, token=influx_token, org=influx_org) as client:
         write_api = client.write_api(write_options=SYNCHRONOUS)
