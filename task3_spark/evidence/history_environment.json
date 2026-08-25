@@ -1,13 +1,13 @@
 {
   "runtime": {
-    "javaVersion": "21.0.11 (Eclipse Adoptium)",
+    "javaVersion": "11.0.29 (Eclipse Adoptium)",
     "javaHome": "/opt/java/openjdk",
-    "scalaVersion": "version 2.13.17"
+    "scalaVersion": "version 2.12.18"
   },
   "sparkProperties": [
     [
       "spark.app.id",
-      "app-20260815112101-0000"
+      "app-20260825045000-0004"
     ],
     [
       "spark.app.name",
@@ -15,15 +15,15 @@
     ],
     [
       "spark.app.startTime",
-      "1786792860630"
+      "1787633400024"
     ],
     [
       "spark.app.submitTime",
-      "1786792859896"
+      "1787633399570"
     ],
     [
       "spark.driver.extraJavaOptions",
-      "-Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-modules=jdk.incubator.vector --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false -Dio.netty.tryReflectionSetAccessible=true -Dio.netty.allocator.type=pooled -Dio.netty.handler.ssl.defaultEndpointVerificationAlgorithm=NONE --enable-native-access=ALL-UNNAMED"
+      "-Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false"
     ],
     [
       "spark.driver.host",
@@ -31,7 +31,7 @@
     ],
     [
       "spark.driver.port",
-      "42213"
+      "46315"
     ],
     [
       "spark.eventLog.dir",
@@ -43,19 +43,11 @@
     ],
     [
       "spark.executor.extraJavaOptions",
-      "-Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-modules=jdk.incubator.vector --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false -Dio.netty.tryReflectionSetAccessible=true -Dio.netty.allocator.type=pooled -Dio.netty.handler.ssl.defaultEndpointVerificationAlgorithm=NONE --enable-native-access=ALL-UNNAMED"
+      "-Djava.net.preferIPv6Addresses=false -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED -Djdk.reflect.useDirectMethodHandle=false"
     ],
     [
       "spark.executor.id",
       "driver"
-    ],
-    [
-      "spark.hadoop.fs.s3a.vectored.read.max.merged.size",
-      "2M"
-    ],
-    [
-      "spark.hadoop.fs.s3a.vectored.read.min.seek.size",
-      "128K"
     ],
     [
       "spark.master",
@@ -72,10 +64,6 @@
     [
       "spark.serializer.objectStreamReset",
       "100"
-    ],
-    [
-      "spark.sql.artifact.isolation.enabled",
-      "false"
     ],
     [
       "spark.submit.deployMode",
@@ -156,14 +144,6 @@
       "org.apache.hadoop.fs.Hdfs"
     ],
     [
-      "fs.AbstractFileSystem.o3fs.impl",
-      "org.apache.hadoop.fs.ozone.OzFs"
-    ],
-    [
-      "fs.AbstractFileSystem.ofs.impl",
-      "org.apache.hadoop.fs.ozone.RootedOzFs"
-    ],
-    [
       "fs.AbstractFileSystem.s3a.impl",
       "org.apache.hadoop.fs.s3a.S3A"
     ],
@@ -217,11 +197,7 @@
     ],
     [
       "fs.azure.buffer.dir",
-      "${env.LOCAL_DIRS:-${hadoop.tmp.dir}}/abfs"
-    ],
-    [
-      "fs.azure.enable.readahead",
-      "true"
+      "${hadoop.tmp.dir}/abfs"
     ],
     [
       "fs.azure.local.sas.key.mode",
@@ -252,10 +228,6 @@
       "false"
     ],
     [
-      "fs.creation.parallel.count",
-      "64"
-    ],
-    [
       "fs.defaultFS",
       "file:///"
     ],
@@ -266,10 +238,6 @@
     [
       "fs.du.interval",
       "600000"
-    ],
-    [
-      "fs.file.checksum.verify",
-      "true"
     ],
     [
       "fs.ftp.data.connection.mode",
@@ -304,14 +272,6 @@
       "true"
     ],
     [
-      "fs.iostatistics.logging.level",
-      "debug"
-    ],
-    [
-      "fs.iostatistics.thread.level.enabled",
-      "true"
-    ],
-    [
       "fs.permissions.umask-mode",
       "022"
     ],
@@ -329,15 +289,11 @@
     ],
     [
       "fs.s3a.attempts.maximum",
-      "5"
-    ],
-    [
-      "fs.s3a.audit.enabled",
-      "true"
+      "20"
     ],
     [
       "fs.s3a.aws.credentials.provider",
-      "\n    org.apache.hadoop.fs.s3a.TemporaryAWSCredentialsProvider,\n    org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider,\n    software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider,\n    org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider\n  "
+      "\n    org.apache.hadoop.fs.s3a.TemporaryAWSCredentialsProvider,\n    org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider,\n    com.amazonaws.auth.EnvironmentVariableCredentialsProvider,\n    org.apache.hadoop.fs.s3a.auth.IAMInstanceCredentialsProvider\n  "
     ],
     [
       "fs.s3a.block.size",
@@ -345,7 +301,7 @@
     ],
     [
       "fs.s3a.buffer.dir",
-      "${env.LOCAL_DIRS:-${hadoop.tmp.dir}}/s3a"
+      "${hadoop.tmp.dir}/s3a"
     ],
     [
       "fs.s3a.change.detection.mode",
@@ -389,11 +345,15 @@
     ],
     [
       "fs.s3a.connection.establish.timeout",
-      "30s"
+      "5000"
     ],
     [
       "fs.s3a.connection.maximum",
-      "500"
+      "96"
+    ],
+    [
+      "fs.s3a.connection.request.timeout",
+      "0"
     ],
     [
       "fs.s3a.connection.ssl.enabled",
@@ -401,15 +361,15 @@
     ],
     [
       "fs.s3a.connection.timeout",
-      "200s"
-    ],
-    [
-      "fs.s3a.connection.ttl",
-      "5m"
+      "200000"
     ],
     [
       "fs.s3a.downgrade.syncable.exceptions",
       "true"
+    ],
+    [
+      "fs.s3a.endpoint",
+      "s3.amazonaws.com"
     ],
     [
       "fs.s3a.etag.checksum.enabled",
@@ -440,6 +400,22 @@
       "32"
     ],
     [
+      "fs.s3a.metadatastore.authoritative",
+      "false"
+    ],
+    [
+      "fs.s3a.metadatastore.fail.on.write.error",
+      "true"
+    ],
+    [
+      "fs.s3a.metadatastore.impl",
+      "org.apache.hadoop.fs.s3a.s3guard.NullMetadataStore"
+    ],
+    [
+      "fs.s3a.metadatastore.metadata.ttl",
+      "15m"
+    ],
+    [
       "fs.s3a.multiobjectdelete.enable",
       "true"
     ],
@@ -449,7 +425,7 @@
     ],
     [
       "fs.s3a.multipart.purge.age",
-      "24h"
+      "86400"
     ],
     [
       "fs.s3a.multipart.size",
@@ -486,6 +462,46 @@
     [
       "fs.s3a.retry.throttle.limit",
       "20"
+    ],
+    [
+      "fs.s3a.s3guard.cli.prune.age",
+      "86400000"
+    ],
+    [
+      "fs.s3a.s3guard.consistency.retry.interval",
+      "2s"
+    ],
+    [
+      "fs.s3a.s3guard.consistency.retry.limit",
+      "7"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.background.sleep",
+      "25ms"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.max.retries",
+      "9"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.table.capacity.read",
+      "0"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.table.capacity.write",
+      "0"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.table.create",
+      "false"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.table.sse.enabled",
+      "false"
+    ],
+    [
+      "fs.s3a.s3guard.ddb.throttle.retry.interval",
+      "100ms"
     ],
     [
       "fs.s3a.select.enabled",
@@ -557,27 +573,19 @@
     ],
     [
       "fs.s3a.threads.keepalivetime",
-      "60s"
+      "60"
     ],
     [
       "fs.s3a.threads.max",
-      "96"
+      "64"
     ],
     [
-      "fs.s3a.vectored.read.max.merged.size",
-      "2M"
-    ],
-    [
-      "fs.s3a.vectored.read.min.seek.size",
-      "128K"
+      "fs.swift.impl",
+      "org.apache.hadoop.fs.swift.snative.SwiftNativeFileSystem"
     ],
     [
       "fs.trash.checkpoint.interval",
       "0"
-    ],
-    [
-      "fs.trash.clean.trashroot.enable",
-      "false"
     ],
     [
       "fs.trash.interval",
@@ -634,6 +642,10 @@
     [
       "fs.viewfs.overload.scheme.target.swebhdfs.impl",
       "org.apache.hadoop.hdfs.web.SWebHdfsFileSystem"
+    ],
+    [
+      "fs.viewfs.overload.scheme.target.swift.impl",
+      "org.apache.hadoop.fs.swift.snative.SwiftNativeFileSystem"
     ],
     [
       "fs.viewfs.overload.scheme.target.wasb.impl",
@@ -736,10 +748,6 @@
       "128"
     ],
     [
-      "hadoop.caller.context.separator",
-      ","
-    ],
-    [
       "hadoop.caller.context.signature.max.size",
       "40"
     ],
@@ -804,15 +812,7 @@
       "60000"
     ],
     [
-      "hadoop.http.jmx.nan-filter.enabled",
-      "false"
-    ],
-    [
       "hadoop.http.logs.enabled",
-      "true"
-    ],
-    [
-      "hadoop.http.metrics.enabled",
       "true"
     ],
     [
@@ -922,14 +922,6 @@
     [
       "hadoop.security.crypto.codec.classes.aes.ctr.nopadding",
       "org.apache.hadoop.crypto.OpensslAesCtrCryptoCodec, org.apache.hadoop.crypto.JceAesCtrCryptoCodec"
-    ],
-    [
-      "hadoop.security.crypto.codec.classes.sm4.ctr.nopadding",
-      "org.apache.hadoop.crypto.OpensslSm4CtrCryptoCodec, org.apache.hadoop.crypto.JceSm4CtrCryptoCodec"
-    ],
-    [
-      "hadoop.security.crypto.jce.provider.auto-add",
-      "true"
     ],
     [
       "hadoop.security.dns.log-slow-lookups.enabled",
@@ -1080,10 +1072,6 @@
       "/dev/urandom"
     ],
     [
-      "hadoop.security.resolver.impl",
-      "org.apache.hadoop.net.DNSDomainNameResolver"
-    ],
-    [
       "hadoop.security.secure.random.impl",
       "org.apache.hadoop.crypto.random.OpensslSecureRandom"
     ],
@@ -1184,38 +1172,6 @@
       "system-native"
     ],
     [
-      "io.compression.codec.lz4.buffersize",
-      "262144"
-    ],
-    [
-      "io.compression.codec.lz4.use.lz4hc",
-      "false"
-    ],
-    [
-      "io.compression.codec.lzo.buffersize",
-      "65536"
-    ],
-    [
-      "io.compression.codec.lzo.class",
-      "org.apache.hadoop.io.compress.LzoCodec"
-    ],
-    [
-      "io.compression.codec.snappy.buffersize",
-      "262144"
-    ],
-    [
-      "io.compression.codec.zstd.buffersize",
-      "0"
-    ],
-    [
-      "io.compression.codec.zstd.level",
-      "3"
-    ],
-    [
-      "io.erasurecode.codec.native.enabled",
-      "true"
-    ],
-    [
       "io.erasurecode.codec.rs-legacy.rawcoders",
       "rs-legacy_java"
     ],
@@ -1270,10 +1226,6 @@
     [
       "ipc.[port_number].callqueue.impl",
       "java.util.concurrent.LinkedBlockingQueue"
-    ],
-    [
-      "ipc.[port_number].callqueue.overflow.trigger.failover",
-      "false"
     ],
     [
       "ipc.[port_number].cost-provider.impl",
@@ -1340,32 +1292,12 @@
       "1"
     ],
     [
-      "ipc.backoff.enable",
-      "false"
-    ],
-    [
-      "ipc.callqueue.impl",
-      "java.util.concurrent.LinkedBlockingQueue"
-    ],
-    [
-      "ipc.callqueue.overflow.trigger.failover",
-      "false"
-    ],
-    [
-      "ipc.client.async.calls.max",
-      "100"
-    ],
-    [
       "ipc.client.bind.wildcard.addr",
       "false"
     ],
     [
       "ipc.client.connect.max.retries",
       "10"
-    ],
-    [
-      "ipc.client.connect.max.retries.on.sasl",
-      "5"
     ],
     [
       "ipc.client.connect.max.retries.on.timeouts",
@@ -1378,10 +1310,6 @@
     [
       "ipc.client.connect.timeout",
       "20000"
-    ],
-    [
-      "ipc.client.connection.idle-scan-interval.ms",
-      "10000"
     ],
     [
       "ipc.client.connection.maxidletime",
@@ -1409,19 +1337,11 @@
     ],
     [
       "ipc.client.rpc-timeout.ms",
-      "120000"
+      "0"
     ],
     [
       "ipc.client.tcpnodelay",
       "true"
-    ],
-    [
-      "ipc.cost-provider.impl",
-      "org.apache.hadoop.ipc.DefaultCostProvider"
-    ],
-    [
-      "ipc.identity-provider.impl",
-      "org.apache.hadoop.ipc.UserIdentityProvider"
     ],
     [
       "ipc.maximum.data.length",
@@ -1436,14 +1356,6 @@
       "60000"
     ],
     [
-      "ipc.scheduler.impl",
-      "org.apache.hadoop.ipc.DefaultRpcScheduler"
-    ],
-    [
-      "ipc.server.handler.queue.size",
-      "100"
-    ],
-    [
       "ipc.server.listen.queue.size",
       "256"
     ],
@@ -1452,39 +1364,15 @@
       "false"
     ],
     [
-      "ipc.server.log.slow.rpc.threshold.ms",
-      "0"
-    ],
-    [
       "ipc.server.max.connections",
       "0"
-    ],
-    [
-      "ipc.server.max.response.size",
-      "1048576"
-    ],
-    [
-      "ipc.server.metrics.update.runner.interval",
-      "5000"
     ],
     [
       "ipc.server.purge.interval",
       "15"
     ],
     [
-      "ipc.server.read.connection-queue.size",
-      "100"
-    ],
-    [
-      "ipc.server.read.threadpool.size",
-      "1"
-    ],
-    [
       "ipc.server.reuseaddr",
-      "true"
-    ],
-    [
-      "ipc.server.tcpnodelay",
       "true"
     ],
     [
@@ -1888,10 +1776,6 @@
       "SAMEORIGIN"
     ],
     [
-      "mapreduce.jvm.add-opens-as-default",
-      "true"
-    ],
-    [
       "mapreduce.jvm.system-properties-to-log",
       "os.name,os.version,java.home,java.runtime.version,java.vendor,java.version,java.vm.name,java.class.path,java.io.tmpdir,user.dir,user.name"
     ],
@@ -1946,14 +1830,6 @@
     [
       "mapreduce.output.fileoutputformat.compress.type",
       "RECORD"
-    ],
-    [
-      "mapreduce.outputcommitter.factory.scheme.abfs",
-      "org.apache.hadoop.fs.azurebfs.commit.AzureManifestCommitterFactory"
-    ],
-    [
-      "mapreduce.outputcommitter.factory.scheme.gs",
-      "org.apache.hadoop.mapreduce.lib.output.committer.manifest.ManifestCommitterFactory"
     ],
     [
       "mapreduce.outputcommitter.factory.scheme.s3a",
@@ -2120,10 +1996,6 @@
       "10000"
     ],
     [
-      "mapreduce.task.ping-for-liveliness-check.enabled",
-      "false"
-    ],
-    [
       "mapreduce.task.profile",
       "false"
     ],
@@ -2150,10 +2022,6 @@
     [
       "mapreduce.task.skip.start.attempts",
       "2"
-    ],
-    [
-      "mapreduce.task.spill.files.count.limit",
-      "-1"
     ],
     [
       "mapreduce.task.stuck.timeout-ms",
@@ -2225,7 +2093,7 @@
     ],
     [
       "yarn.am.liveness-monitor.expiry-interval-ms",
-      "900000"
+      "600000"
     ],
     [
       "yarn.app.attempt.diagnostics.limit.kc",
@@ -2332,18 +2200,6 @@
       "0"
     ],
     [
-      "yarn.apps.cache.enable",
-      "false"
-    ],
-    [
-      "yarn.apps.cache.expire",
-      "30s"
-    ],
-    [
-      "yarn.apps.cache.size",
-      "1000"
-    ],
-    [
       "yarn.client.application-client-protocol.poll-interval-ms",
       "200"
     ],
@@ -2404,135 +2260,15 @@
       "5000"
     ],
     [
-      "yarn.dispatcher.print-thread-pool.core-pool-size",
-      "1"
-    ],
-    [
-      "yarn.dispatcher.print-thread-pool.keep-alive-time",
-      "10s"
-    ],
-    [
-      "yarn.dispatcher.print-thread-pool.maximum-pool-size",
-      "5"
-    ],
-    [
       "yarn.fail-fast",
       "false"
-    ],
-    [
-      "yarn.federation.amrmproxy.allocation.history.max.entry",
-      "100"
-    ],
-    [
-      "yarn.federation.amrmproxy.register.uam.interval",
-      "100ms"
-    ],
-    [
-      "yarn.federation.amrmproxy.register.uam.retry-count",
-      "3"
-    ],
-    [
-      "yarn.federation.cache-entity.nums",
-      "1000"
     ],
     [
       "yarn.federation.cache-ttl.secs",
       "300"
     ],
     [
-      "yarn.federation.cache.class",
-      "org.apache.hadoop.yarn.server.federation.cache.FederationJCache"
-    ],
-    [
       "yarn.federation.enabled",
-      "false"
-    ],
-    [
-      "yarn.federation.failover.random.order",
-      "false"
-    ],
-    [
-      "yarn.federation.gpg.application.cleaner.class",
-      "org.apache.hadoop.yarn.server.globalpolicygenerator.applicationcleaner.DefaultApplicationCleaner"
-    ],
-    [
-      "yarn.federation.gpg.application.cleaner.contact.router.spec",
-      "3,10,600000"
-    ],
-    [
-      "yarn.federation.gpg.application.cleaner.interval-ms",
-      "-1s"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.class",
-      "org.apache.hadoop.yarn.server.globalpolicygenerator.policygenerator.NoOpGlobalPolicy"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.interval",
-      "1h"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.interval-ms",
-      "3600000"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.load-based.edit.maximum",
-      "3"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.load-based.pending.maximum",
-      "1000"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.load-based.pending.minimum",
-      "100"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.load-based.scaling",
-      "LINEAR"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.load-based.weight.minimum",
-      "0"
-    ],
-    [
-      "yarn.federation.gpg.policy.generator.readonly",
-      "false"
-    ],
-    [
-      "yarn.federation.gpg.scheduled.executor.threads",
-      "10"
-    ],
-    [
-      "yarn.federation.gpg.subcluster.cleaner.interval-ms",
-      "-1ms"
-    ],
-    [
-      "yarn.federation.gpg.subcluster.heartbeat.expiration-ms",
-      "30m"
-    ],
-    [
-      "yarn.federation.gpg.webapp.address",
-      "0.0.0.0:8069"
-    ],
-    [
-      "yarn.federation.gpg.webapp.connect-timeout",
-      "30s"
-    ],
-    [
-      "yarn.federation.gpg.webapp.cross-origin.enabled",
-      "false"
-    ],
-    [
-      "yarn.federation.gpg.webapp.https.address",
-      "0.0.0.0:8070"
-    ],
-    [
-      "yarn.federation.gpg.webapp.read-timeout",
-      "30s"
-    ],
-    [
-      "yarn.federation.non-ha.enabled",
       "false"
     ],
     [
@@ -2544,48 +2280,8 @@
       "org.apache.hadoop.yarn.server.federation.store.impl.MemoryFederationStateStore"
     ],
     [
-      "yarn.federation.state-store.clean-up-retry-count",
-      "1"
-    ],
-    [
-      "yarn.federation.state-store.clean-up-retry-sleep-time",
-      "1s"
-    ],
-    [
-      "yarn.federation.state-store.heartbeat.initial-delay",
-      "30s"
-    ],
-    [
-      "yarn.federation.state-store.max-applications",
-      "1000"
-    ],
-    [
-      "yarn.federation.state-store.sql.conn-time-out",
-      "10s"
-    ],
-    [
-      "yarn.federation.state-store.sql.idle-time-out",
-      "10m"
-    ],
-    [
-      "yarn.federation.state-store.sql.max-life-time",
-      "30m"
-    ],
-    [
-      "yarn.federation.state-store.sql.minimum-idle",
-      "1"
-    ],
-    [
-      "yarn.federation.state-store.sql.pool-name",
-      "YARN-Federation-DataBasePool"
-    ],
-    [
       "yarn.federation.subcluster-resolver.class",
       "org.apache.hadoop.yarn.server.federation.resolver.DefaultSubClusterResolverImpl"
-    ],
-    [
-      "yarn.fs-store.file.replication",
-      "0"
     ],
     [
       "yarn.http.policy",
@@ -2614,10 +2310,6 @@
     [
       "yarn.log-aggregation.debug.filesize",
       "104857600"
-    ],
-    [
-      "yarn.log-aggregation.enable-local-cleanup",
-      "true"
     ],
     [
       "yarn.log-aggregation.file-controller.TFile.class",
@@ -2700,14 +2392,6 @@
       "org.apache.hadoop.yarn.server.nodemanager.amrmproxy.DefaultRequestInterceptor"
     ],
     [
-      "yarn.nodemanager.amrmproxy.wait.uam-register.done",
-      "false"
-    ],
-    [
-      "yarn.nodemanager.aux-services.%s.classpath",
-      "NONE"
-    ],
-    [
       "yarn.nodemanager.aux-services.manifest.enabled",
       "false"
     ],
@@ -2742,10 +2426,6 @@
     [
       "yarn.nodemanager.container-localizer.java.opts",
       "-Xmx256m"
-    ],
-    [
-      "yarn.nodemanager.container-localizer.java.opts.add-exports-as-default",
-      "true"
     ],
     [
       "yarn.nodemanager.container-localizer.log.level",
@@ -2856,10 +2536,6 @@
       "basic"
     ],
     [
-      "yarn.nodemanager.dispatcher.metric.enable",
-      "false"
-    ],
-    [
       "yarn.nodemanager.distributed-scheduling.enabled",
       "false"
     ],
@@ -2906,26 +2582,6 @@
     [
       "yarn.nodemanager.keytab",
       "/etc/krb5.keytab"
-    ],
-    [
-      "yarn.nodemanager.least-load-policy-selector.enabled",
-      "false"
-    ],
-    [
-      "yarn.nodemanager.least-load-policy-selector.fail-on-error",
-      "true"
-    ],
-    [
-      "yarn.nodemanager.least-load-policy-selector.multiplier",
-      "50000"
-    ],
-    [
-      "yarn.nodemanager.least-load-policy-selector.pending-container.threshold",
-      "10000"
-    ],
-    [
-      "yarn.nodemanager.least-load-policy-selector.use-active-core",
-      "false"
     ],
     [
       "yarn.nodemanager.linux-container-executor.cgroups.delete-delay-ms",
@@ -3012,10 +2668,6 @@
       "3600"
     ],
     [
-      "yarn.nodemanager.log-container-debug-info-on-error.enabled",
-      "false"
-    ],
-    [
       "yarn.nodemanager.log-container-debug-info.enabled",
       "true"
     ],
@@ -3024,20 +2676,12 @@
       "${yarn.log.dir}/userlogs"
     ],
     [
-      "yarn.nodemanager.log.delete.threshold",
-      "100g"
-    ],
-    [
       "yarn.nodemanager.log.deletion-threads-count",
       "4"
     ],
     [
       "yarn.nodemanager.log.retain-seconds",
       "10800"
-    ],
-    [
-      "yarn.nodemanager.log.trigger.delete.by-size.enabled",
-      "false"
     ],
     [
       "yarn.nodemanager.logaggregation.threadpool-size-max",
@@ -3082,10 +2726,6 @@
     [
       "yarn.nodemanager.opportunistic-containers-max-queue-length",
       "0"
-    ],
-    [
-      "yarn.nodemanager.opportunistic-containers-queue-policy",
-      "BY_QUEUE_LEN"
     ],
     [
       "yarn.nodemanager.opportunistic-containers-use-pause-for-preemption",
@@ -3420,10 +3060,6 @@
       "false"
     ],
     [
-      "yarn.resourcemanager.application-tag-based-placement.force-lowercase",
-      "true"
-    ],
-    [
       "yarn.resourcemanager.application-timeouts.monitor.interval-ms",
       "3000"
     ],
@@ -3508,16 +3144,8 @@
       "*********(redacted)"
     ],
     [
-      "yarn.resourcemanager.delegation.token.remove-scan-interval",
-      "*********(redacted)"
-    ],
-    [
       "yarn.resourcemanager.delegation.token.renew-interval",
       "*********(redacted)"
-    ],
-    [
-      "yarn.resourcemanager.enable-node-untracked-without-include-path",
-      "false"
     ],
     [
       "yarn.resourcemanager.epoch.range",
@@ -3624,16 +3252,8 @@
       "-1"
     ],
     [
-      "yarn.resourcemanager.node-labels.am.allow-non-exclusive-allocation",
-      "false"
-    ],
-    [
       "yarn.resourcemanager.node-labels.provider.fetch-interval-ms",
       "1800000"
-    ],
-    [
-      "yarn.resourcemanager.node-labels.provider.update-newly-registered-nodes-interval-ms",
-      "30000"
     ],
     [
       "yarn.resourcemanager.node-removal-untracked.timeout-ms",
@@ -3674,14 +3294,6 @@
     [
       "yarn.resourcemanager.nodemanagers.heartbeat-interval-speedup-factor",
       "1.0"
-    ],
-    [
-      "yarn.resourcemanager.nodestore-rootdir.num-retries",
-      "1000"
-    ],
-    [
-      "yarn.resourcemanager.nodestore-rootdir.retry-interval-ms",
-      "1000"
     ],
     [
       "yarn.resourcemanager.opportunistic-container-allocation.enabled",
@@ -3872,10 +3484,6 @@
       "0"
     ],
     [
-      "yarn.resourcemanager.zk-client-ssl.enabled",
-      "false"
-    ],
-    [
       "yarn.resourcemanager.zk-delegation-token-node.split-index",
       "*********(redacted)"
     ],
@@ -3892,36 +3500,8 @@
       "false"
     ],
     [
-      "yarn.router.asc-interceptor-max-size",
-      "1MB"
-    ],
-    [
       "yarn.router.clientrm.interceptor-class.pipeline",
       "org.apache.hadoop.yarn.server.router.clientrm.DefaultClientRequestInterceptor"
-    ],
-    [
-      "yarn.router.deregister.subcluster.enabled",
-      "true"
-    ],
-    [
-      "yarn.router.interceptor.allow-partial-result.enable",
-      "false"
-    ],
-    [
-      "yarn.router.interceptor.user-thread-pool.allow-core-thread-time-out",
-      "false"
-    ],
-    [
-      "yarn.router.interceptor.user-thread-pool.keep-alive-time",
-      "30s"
-    ],
-    [
-      "yarn.router.interceptor.user-thread-pool.maximum-pool-size",
-      "5"
-    ],
-    [
-      "yarn.router.interceptor.user-thread-pool.minimum-pool-size",
-      "5"
     ],
     [
       "yarn.router.interceptor.user.threadpool-size",
@@ -3936,36 +3516,8 @@
       "org.apache.hadoop.yarn.server.router.rmadmin.DefaultRMAdminRequestInterceptor"
     ],
     [
-      "yarn.router.scheduled.executor.threads",
-      "1"
-    ],
-    [
-      "yarn.router.subcluster.cleaner.interval.time",
-      "60s"
-    ],
-    [
-      "yarn.router.subcluster.heartbeat.expiration.time",
-      "30m"
-    ],
-    [
-      "yarn.router.submit.interval.time",
-      "10ms"
-    ],
-    [
       "yarn.router.webapp.address",
       "0.0.0.0:8089"
-    ],
-    [
-      "yarn.router.webapp.appsinfo-cached-count",
-      "100"
-    ],
-    [
-      "yarn.router.webapp.appsinfo-enabled",
-      "false"
-    ],
-    [
-      "yarn.router.webapp.cross-origin.enabled",
-      "false"
     ],
     [
       "yarn.router.webapp.https.address",
@@ -3974,10 +3526,6 @@
     [
       "yarn.router.webapp.interceptor-class.pipeline",
       "org.apache.hadoop.yarn.server.router.webapp.DefaultRequestInterceptorREST"
-    ],
-    [
-      "yarn.router.webapp.proxy.enable",
-      "true"
     ],
     [
       "yarn.scheduler.configuration.fs.path",
@@ -4034,10 +3582,6 @@
     [
       "yarn.scheduler.queue-placement-rules",
       "user-group"
-    ],
-    [
-      "yarn.scheduler.skip.node.multiplier",
-      "2"
     ],
     [
       "yarn.sharedcache.admin.address",
@@ -4376,10 +3920,6 @@
       "false"
     ],
     [
-      "yarn.webapp.ui1.tools.enable",
-      "true"
-    ],
-    [
       "yarn.webapp.ui2.enable",
       "false"
     ],
@@ -4398,8 +3938,8 @@
       "true"
     ],
     [
-      "derby.connection.requireAuthentication",
-      "false"
+      "awt.toolkit",
+      "sun.awt.X11.XToolkit"
     ],
     [
       "file.encoding",
@@ -4410,20 +3950,16 @@
       "/"
     ],
     [
-      "io.netty.allocator.type",
-      "pooled"
+      "java.awt.graphicsenv",
+      "sun.awt.X11GraphicsEnvironment"
     ],
     [
-      "io.netty.handler.ssl.defaultEndpointVerificationAlgorithm",
-      "NONE"
-    ],
-    [
-      "io.netty.tryReflectionSetAccessible",
-      "true"
+      "java.awt.printerjob",
+      "sun.print.PSPrinterJob"
     ],
     [
       "java.class.version",
-      "65.0"
+      "55.0"
     ],
     [
       "java.home",
@@ -4443,7 +3979,11 @@
     ],
     [
       "java.runtime.version",
-      "21.0.11+10-LTS"
+      "11.0.29+7"
+    ],
+    [
+      "java.specification.maintenance.version",
+      "3"
     ],
     [
       "java.specification.name",
@@ -4455,7 +3995,7 @@
     ],
     [
       "java.specification.version",
-      "21"
+      "11"
     ],
     [
       "java.vendor",
@@ -4471,15 +4011,15 @@
     ],
     [
       "java.vendor.version",
-      "Temurin-21.0.11+10"
+      "Temurin-11.0.29+7"
     ],
     [
       "java.version",
-      "21.0.11"
+      "11.0.29"
     ],
     [
       "java.version.date",
-      "2026-04-21"
+      "2025-10-21"
     ],
     [
       "java.vm.compressedOopsMode",
@@ -4503,7 +4043,7 @@
     ],
     [
       "java.vm.specification.version",
-      "21"
+      "11"
     ],
     [
       "java.vm.vendor",
@@ -4511,7 +4051,7 @@
     ],
     [
       "java.vm.version",
-      "21.0.11+10-LTS"
+      "11.0.29+7"
     ],
     [
       "jdk.debug",
@@ -4523,15 +4063,11 @@
     ],
     [
       "jetty.git.hash",
-      "7559873b6e46eea7c2c6da2b58327ea2ecf941f4"
+      "8f1440587e9e4ae7db3d74cf205643f3d707148d"
     ],
     [
       "line.separator",
       "\n"
-    ],
-    [
-      "native.encoding",
-      "UTF-8"
     ],
     [
       "os.arch",
@@ -4550,14 +4086,6 @@
       ":"
     ],
     [
-      "stderr.encoding",
-      "UTF-8"
-    ],
-    [
-      "stdout.encoding",
-      "UTF-8"
-    ],
-    [
       "sun.arch.data.model",
       "64"
     ],
@@ -4570,12 +4098,16 @@
       "little"
     ],
     [
+      "sun.cpu.isalist",
+      ""
+    ],
+    [
       "sun.io.unicode.encoding",
       "UnicodeLittle"
     ],
     [
       "sun.java.command",
-      "org.apache.spark.deploy.SparkSubmit --master spark://spark-master:7077 /opt/spark/jobs/berkstan_analysis.py CAPTURE_EVIDENCE=true"
+      "org.apache.spark.deploy.SparkSubmit --master spark://spark-master:7077 /opt/spark/jobs/berkstan_analysis.py"
     ],
     [
       "sun.java.launcher",
@@ -4588,6 +4120,10 @@
     [
       "sun.management.compiler",
       "HotSpot 64-Bit Tiered Compilers"
+    ],
+    [
+      "sun.os.patch.level",
+      "unknown"
     ],
     [
       "user.country",
@@ -4650,7 +4186,7 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/RoaringBitmap-1.3.0.jar",
+      "/opt/spark/jars/RoaringBitmap-0.9.45.jar",
       "System Classpath"
     ],
     [
@@ -4658,11 +4194,19 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/aircompressor-2.0.3.jar",
+      "/opt/spark/jars/activation-1.1.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/algebra_2.13-2.8.0.jar",
+      "/opt/spark/jars/aircompressor-0.27.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/algebra_2.12-2.0.1.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/annotations-17.0.0.jar",
       "System Classpath"
     ],
     [
@@ -4670,15 +4214,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/antlr4-runtime-4.13.1.jar",
+      "/opt/spark/jars/antlr4-runtime-4.9.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/aopalliance-repackaged-3.0.6.jar",
+      "/opt/spark/jars/aopalliance-repackaged-2.6.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arpack-3.0.4.jar",
+      "/opt/spark/jars/arpack-3.0.3.jar",
       "System Classpath"
     ],
     [
@@ -4686,59 +4230,55 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-compression-18.3.0.jar",
+      "/opt/spark/jars/arrow-format-12.0.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-format-18.3.0.jar",
+      "/opt/spark/jars/arrow-memory-core-12.0.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-memory-core-18.3.0.jar",
+      "/opt/spark/jars/arrow-memory-netty-12.0.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-memory-netty-18.3.0.jar",
+      "/opt/spark/jars/arrow-vector-12.0.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-memory-netty-buffer-patch-18.3.0.jar",
+      "/opt/spark/jars/audience-annotations-0.5.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/arrow-vector-18.3.0.jar",
+      "/opt/spark/jars/avro-1.11.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/audience-annotations-0.12.0.jar",
+      "/opt/spark/jars/avro-ipc-1.11.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/avro-1.12.1.jar",
+      "/opt/spark/jars/avro-mapred-1.11.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/avro-ipc-1.12.1.jar",
+      "/opt/spark/jars/blas-3.0.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/avro-mapred-1.12.1.jar",
+      "/opt/spark/jars/bonecp-0.8.0.RELEASE.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/blas-3.0.4.jar",
+      "/opt/spark/jars/breeze-macros_2.12-2.1.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/breeze-macros_2.13-2.1.0.jar",
+      "/opt/spark/jars/breeze_2.12-2.1.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/breeze_2.13-2.1.0.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/cats-kernel_2.13-2.8.0.jar",
+      "/opt/spark/jars/cats-kernel_2.12-2.1.1.jar",
       "System Classpath"
     ],
     [
@@ -4746,19 +4286,23 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/chill_2.13-0.10.0.jar",
+      "/opt/spark/jars/chill_2.12-0.10.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-cli-1.10.0.jar",
+      "/opt/spark/jars/commons-cli-1.5.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-codec-1.19.0.jar",
+      "/opt/spark/jars/commons-codec-1.16.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-collections4-4.5.0.jar",
+      "/opt/spark/jars/commons-collections-3.2.2.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/commons-collections4-4.4.jar",
       "System Classpath"
     ],
     [
@@ -4766,7 +4310,7 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-compress-1.28.0.jar",
+      "/opt/spark/jars/commons-compress-1.23.0.jar",
       "System Classpath"
     ],
     [
@@ -4778,7 +4322,7 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-io-2.21.0.jar",
+      "/opt/spark/jars/commons-io-2.16.1.jar",
       "System Classpath"
     ],
     [
@@ -4786,7 +4330,11 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-lang3-3.19.0.jar",
+      "/opt/spark/jars/commons-lang3-3.12.0.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/commons-logging-1.1.3.jar",
       "System Classpath"
     ],
     [
@@ -4798,7 +4346,7 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/commons-text-1.14.0.jar",
+      "/opt/spark/jars/commons-text-1.10.0.jar",
       "System Classpath"
     ],
     [
@@ -4806,15 +4354,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/curator-client-5.9.0.jar",
+      "/opt/spark/jars/curator-client-2.13.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/curator-framework-5.9.0.jar",
+      "/opt/spark/jars/curator-framework-2.13.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/curator-recipes-5.9.0.jar",
+      "/opt/spark/jars/curator-recipes-2.13.0.jar",
       "System Classpath"
     ],
     [
@@ -4830,23 +4378,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/datasketches-java-6.2.0.jar",
+      "/opt/spark/jars/datasketches-java-3.3.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/datasketches-memory-3.0.2.jar",
+      "/opt/spark/jars/datasketches-memory-2.1.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/derby-10.16.1.1.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/derbyshared-10.16.1.1.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/derbytools-10.16.1.1.jar",
+      "/opt/spark/jars/derby-10.14.2.0.jar",
       "System Classpath"
     ],
     [
@@ -4854,75 +4394,83 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/failureaccess-1.0.3.jar",
+      "/opt/spark/jars/flatbuffers-java-1.12.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/flatbuffers-java-25.2.10.jar",
+      "/opt/spark/jars/gson-2.2.4.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/gson-2.11.0.jar",
+      "/opt/spark/jars/guava-14.0.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/guava-33.4.8-jre.jar",
+      "/opt/spark/jars/hadoop-client-api-3.3.4.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hadoop-client-api-3.4.2.jar",
+      "/opt/spark/jars/hadoop-client-runtime-3.3.4.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hadoop-client-runtime-3.4.2.jar",
+      "/opt/spark/jars/hadoop-shaded-guava-1.1.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-beeline-2.3.10.jar",
+      "/opt/spark/jars/hadoop-yarn-server-web-proxy-3.3.4.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-cli-2.3.10.jar",
+      "/opt/spark/jars/hive-beeline-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-common-2.3.10.jar",
+      "/opt/spark/jars/hive-cli-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-exec-2.3.10-core.jar",
+      "/opt/spark/jars/hive-common-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-jdbc-2.3.10.jar",
+      "/opt/spark/jars/hive-exec-2.3.9-core.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-metastore-2.3.10.jar",
+      "/opt/spark/jars/hive-jdbc-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-serde-2.3.10.jar",
+      "/opt/spark/jars/hive-llap-common-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-service-rpc-4.0.0.jar",
+      "/opt/spark/jars/hive-metastore-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-shims-0.23-2.3.10.jar",
+      "/opt/spark/jars/hive-serde-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-shims-2.3.10.jar",
+      "/opt/spark/jars/hive-service-rpc-3.1.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-shims-common-2.3.10.jar",
+      "/opt/spark/jars/hive-shims-0.23-2.3.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hive-shims-scheduler-2.3.10.jar",
+      "/opt/spark/jars/hive-shims-2.3.9.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/hive-shims-common-2.3.9.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/hive-shims-scheduler-2.3.9.jar",
       "System Classpath"
     ],
     [
@@ -4930,15 +4478,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hk2-api-3.0.6.jar",
+      "/opt/spark/jars/hk2-api-2.6.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hk2-locator-3.0.6.jar",
+      "/opt/spark/jars/hk2-locator-2.6.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/hk2-utils-3.0.6.jar",
+      "/opt/spark/jars/hk2-utils-2.6.1.jar",
       "System Classpath"
     ],
     [
@@ -4950,75 +4498,71 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/icu4j-77.1.jar",
+      "/opt/spark/jars/istack-commons-runtime-3.0.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/istack-commons-runtime-4.1.2.jar",
+      "/opt/spark/jars/ivy-2.5.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/ivy-2.5.3.jar",
+      "/opt/spark/jars/jackson-annotations-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-annotations-2.21.jar",
+      "/opt/spark/jars/jackson-core-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-core-2.21.2.jar",
+      "/opt/spark/jars/jackson-core-asl-1.9.13.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-databind-2.21.2.jar",
+      "/opt/spark/jars/jackson-databind-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-dataformat-yaml-2.21.2.jar",
+      "/opt/spark/jars/jackson-dataformat-yaml-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-datatype-jsr310-2.21.2.jar",
+      "/opt/spark/jars/jackson-datatype-jsr310-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jackson-module-scala_2.13-2.21.2.jar",
+      "/opt/spark/jars/jackson-mapper-asl-1.9.13.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.activation-api-2.1.3.jar",
+      "/opt/spark/jars/jackson-module-scala_2.12-2.15.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.annotation-api-2.1.1.jar",
+      "/opt/spark/jars/jakarta.annotation-api-1.3.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.inject-api-2.0.1.jar",
+      "/opt/spark/jars/jakarta.inject-2.6.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.servlet-api-5.0.0.jar",
+      "/opt/spark/jars/jakarta.servlet-api-4.0.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.validation-api-3.0.2.jar",
+      "/opt/spark/jars/jakarta.validation-api-2.0.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.ws.rs-api-3.0.0.jar",
+      "/opt/spark/jars/jakarta.ws.rs-api-2.1.6.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jakarta.xml.bind-api-4.0.2.jar",
+      "/opt/spark/jars/jakarta.xml.bind-api-2.3.2.jar",
       "System Classpath"
     ],
     [
       "/opt/spark/jars/janino-3.1.9.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/java-diff-utils-4.16.jar",
       "System Classpath"
     ],
     [
@@ -5030,23 +4574,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/javax.servlet-api-4.0.1.jar",
-      "System Classpath"
-    ],
-    [
       "/opt/spark/jars/javolution-5.5.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jaxb-core-4.0.5.jar",
+      "/opt/spark/jars/jaxb-runtime-2.3.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jaxb-runtime-4.0.5.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/jcl-over-slf4j-2.0.17.jar",
+      "/opt/spark/jars/jcl-over-slf4j-2.0.7.jar",
       "System Classpath"
     ],
     [
@@ -5054,39 +4590,27 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-client-3.0.18.jar",
+      "/opt/spark/jars/jersey-client-2.47.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-common-3.0.18.jar",
+      "/opt/spark/jars/jersey-common-2.47.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-container-servlet-3.0.18.jar",
+      "/opt/spark/jars/jersey-container-servlet-2.47.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-container-servlet-core-3.0.18.jar",
+      "/opt/spark/jars/jersey-container-servlet-core-2.47.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-hk2-3.0.18.jar",
+      "/opt/spark/jars/jersey-hk2-2.47.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jersey-server-3.0.18.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/jjwt-api-0.12.6.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/jjwt-impl-0.12.6.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/jjwt-jackson-0.12.6.jar",
+      "/opt/spark/jars/jersey-server-2.47.jar",
       "System Classpath"
     ],
     [
@@ -5094,11 +4618,11 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jline-3.29.0-jdk8.jar",
+      "/opt/spark/jars/joda-time-2.12.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/joda-time-2.14.0.jar",
+      "/opt/spark/jars/jodd-core-3.5.2.jar",
       "System Classpath"
     ],
     [
@@ -5110,23 +4634,19 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/json4s-ast_2.13-4.0.7.jar",
+      "/opt/spark/jars/json4s-ast_2.12-3.7.0-M11.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/json4s-core_2.13-4.0.7.jar",
+      "/opt/spark/jars/json4s-core_2.12-3.7.0-M11.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/json4s-jackson-core_2.13-4.0.7.jar",
+      "/opt/spark/jars/json4s-jackson_2.12-3.7.0-M11.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/json4s-jackson_2.13-4.0.7.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/json4s-scalap_2.13-4.0.7.jar",
+      "/opt/spark/jars/json4s-scalap_2.12-3.7.0-M11.jar",
       "System Classpath"
     ],
     [
@@ -5138,119 +4658,115 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jts-core-1.20.0.jar",
+      "/opt/spark/jars/jul-to-slf4j-2.0.7.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/jul-to-slf4j-2.0.17.jar",
+      "/opt/spark/jars/kryo-shaded-4.0.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kryo-shaded-4.0.3.jar",
+      "/opt/spark/jars/kubernetes-client-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-client-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-client-api-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-client-api-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-httpclient-okhttp-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-httpclient-vertx-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-admissionregistration-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-admissionregistration-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-apiextensions-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-apiextensions-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-apps-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-apps-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-autoscaling-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-autoscaling-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-batch-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-batch-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-certificates-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-certificates-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-common-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-common-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-coordination-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-coordination-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-core-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-core-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-discovery-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-discovery-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-events-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-events-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-extensions-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-extensions-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-flowcontrol-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-flowcontrol-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-gatewayapi-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-gatewayapi-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-metrics-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-metrics-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-networking-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-networking-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-node-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-node-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-policy-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-policy-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-rbac-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-rbac-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-resource-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-resource-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-scheduling-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-scheduling-7.4.1.jar",
+      "/opt/spark/jars/kubernetes-model-storageclass-6.7.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/kubernetes-model-storageclass-7.4.1.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/lapack-3.0.4.jar",
+      "/opt/spark/jars/lapack-3.0.3.jar",
       "System Classpath"
     ],
     [
@@ -5262,27 +4778,27 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/libthrift-0.16.0.jar",
+      "/opt/spark/jars/libthrift-0.12.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/log4j-1.2-api-2.24.3.jar",
+      "/opt/spark/jars/log4j-1.2-api-2.20.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/log4j-api-2.24.3.jar",
+      "/opt/spark/jars/log4j-api-2.20.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/log4j-core-2.24.3.jar",
+      "/opt/spark/jars/log4j-core-2.20.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/log4j-layout-template-json-2.24.3.jar",
+      "/opt/spark/jars/log4j-slf4j2-impl-2.20.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/log4j-slf4j2-impl-2.24.3.jar",
+      "/opt/spark/jars/logging-interceptor-3.12.12.jar",
       "System Classpath"
     ],
     [
@@ -5290,23 +4806,27 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/metrics-core-4.2.37.jar",
+      "/opt/spark/jars/mesos-1.4.3-shaded-protobuf.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/metrics-graphite-4.2.37.jar",
+      "/opt/spark/jars/metrics-core-4.2.19.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/metrics-jmx-4.2.37.jar",
+      "/opt/spark/jars/metrics-graphite-4.2.19.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/metrics-json-4.2.37.jar",
+      "/opt/spark/jars/metrics-jmx-4.2.19.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/metrics-jvm-4.2.37.jar",
+      "/opt/spark/jars/metrics-json-4.2.19.jar",
+      "System Classpath"
+    ],
+    [
+      "/opt/spark/jars/metrics-jvm-4.2.19.jar",
       "System Classpath"
     ],
     [
@@ -5314,175 +4834,87 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-all-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-all-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-buffer-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-buffer-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-codec-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-base-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-codec-http-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-classes-quic-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-codec-http2-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-compression-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-codec-socks-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-dns-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-common-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-http-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-handler-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-http2-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-handler-proxy-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-http3-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-resolver-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-marshalling-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-transport-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-aarch_64.jar",
+      "/opt/spark/jars/netty-transport-classes-epoll-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-x86_64.jar",
+      "/opt/spark/jars/netty-transport-classes-kqueue-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-aarch_64.jar",
+      "/opt/spark/jars/netty-transport-native-epoll-4.1.96.Final-linux-aarch_64.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-x86_64.jar",
+      "/opt/spark/jars/netty-transport-native-epoll-4.1.96.Final-linux-x86_64.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-native-quic-4.2.7.Final-windows-x86_64.jar",
+      "/opt/spark/jars/netty-transport-native-kqueue-4.1.96.Final-osx-aarch_64.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-protobuf-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-transport-native-kqueue-4.1.96.Final-osx-x86_64.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-codec-socks-4.2.7.Final.jar",
+      "/opt/spark/jars/netty-transport-native-unix-common-4.1.96.Final.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-common-4.2.7.Final.jar",
+      "/opt/spark/jars/objenesis-3.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-handler-4.2.7.Final.jar",
+      "/opt/spark/jars/okhttp-3.12.12.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/netty-handler-proxy-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-resolver-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-resolver-dns-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-boringssl-static-2.0.74.Final-linux-aarch_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-boringssl-static-2.0.74.Final-linux-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-boringssl-static-2.0.74.Final-osx-aarch_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-boringssl-static-2.0.74.Final-osx-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-boringssl-static-2.0.74.Final-windows-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-tcnative-classes-2.0.74.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-classes-epoll-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-classes-io_uring-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-classes-kqueue-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-riscv64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-aarch_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-riscv64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-aarch_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-x86_64.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/netty-transport-native-unix-common-4.2.7.Final.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/objenesis-3.4.jar",
+      "/opt/spark/jars/okio-1.17.6.jar",
       "System Classpath"
     ],
     [
@@ -5490,19 +4922,15 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/orc-core-2.2.2-shaded-protobuf.jar",
+      "/opt/spark/jars/orc-core-1.9.8-shaded-protobuf.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/orc-format-1.1.1-shaded-protobuf.jar",
+      "/opt/spark/jars/orc-mapreduce-1.9.8-shaded-protobuf.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/orc-mapreduce-2.2.2-shaded-protobuf.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/orc-shims-2.2.2.jar",
+      "/opt/spark/jars/orc-shims-1.9.8.jar",
       "System Classpath"
     ],
     [
@@ -5514,199 +4942,191 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/paranamer-2.8.3.jar",
+      "/opt/spark/jars/paranamer-2.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-column-1.16.0.jar",
+      "/opt/spark/jars/parquet-column-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-common-1.16.0.jar",
+      "/opt/spark/jars/parquet-common-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-encoding-1.16.0.jar",
+      "/opt/spark/jars/parquet-encoding-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-format-structures-1.16.0.jar",
+      "/opt/spark/jars/parquet-format-structures-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-hadoop-1.16.0.jar",
+      "/opt/spark/jars/parquet-hadoop-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/parquet-jackson-1.16.0.jar",
+      "/opt/spark/jars/parquet-jackson-1.13.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/pickle-1.5.jar",
+      "/opt/spark/jars/pickle-1.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/py4j-0.10.9.9.jar",
+      "/opt/spark/jars/py4j-0.10.9.7.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/rocksdbjni-9.8.4.jar",
+      "/opt/spark/jars/rocksdbjni-8.3.2.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-compiler-2.13.17.jar",
+      "/opt/spark/jars/scala-collection-compat_2.12-2.7.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-library-2.13.17.jar",
+      "/opt/spark/jars/scala-compiler-2.12.18.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-parallel-collections_2.13-1.2.0.jar",
+      "/opt/spark/jars/scala-library-2.12.18.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-parser-combinators_2.13-2.4.0.jar",
+      "/opt/spark/jars/scala-parser-combinators_2.12-2.3.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-reflect-2.13.17.jar",
+      "/opt/spark/jars/scala-reflect-2.12.18.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/scala-xml_2.13-2.4.0.jar",
+      "/opt/spark/jars/scala-xml_2.12-2.1.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/slf4j-api-2.0.17.jar",
+      "/opt/spark/jars/shims-0.9.45.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/snakeyaml-2.5.jar",
+      "/opt/spark/jars/slf4j-api-2.0.7.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/snakeyaml-engine-2.10.jar",
+      "/opt/spark/jars/snakeyaml-2.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/snappy-java-1.1.10.8.jar",
+      "/opt/spark/jars/snakeyaml-engine-2.6.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-catalyst_2.13-4.1.2.jar",
+      "/opt/spark/jars/snappy-java-1.1.10.5.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-common-utils-java_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-catalyst_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-common-utils_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-common-utils_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-connect_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-core_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-core_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-graphx_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-graphx_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-hive-thriftserver_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-hive-thriftserver_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-hive_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-hive_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-kubernetes_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-kubernetes_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-kvstore_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-kvstore_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-launcher_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-launcher_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-mesos_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-mllib-local_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-mllib-local_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-mllib_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-mllib_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-network-common_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-network-common_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-network-shuffle_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-network-shuffle_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-pipelines_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-repl_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-repl_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-sketch_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-sketch_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-sql-api_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-sql-api_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-sql_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-sql_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-streaming_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-streaming_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-tags_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-tags_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-unsafe_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-unsafe_2.13-4.1.2.jar",
+      "/opt/spark/jars/spark-yarn_2.12-3.5.8.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-variant_2.13-4.1.2.jar",
+      "/opt/spark/jars/spire-macros_2.12-0.17.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spark-yarn_2.13-4.1.2.jar",
+      "/opt/spark/jars/spire-platform_2.12-0.17.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spire-macros_2.13-0.18.0.jar",
+      "/opt/spark/jars/spire-util_2.12-0.17.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/spire-platform_2.13-0.18.0.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/spire-util_2.13-0.18.0.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/spire_2.13-0.18.0.jar",
+      "/opt/spark/jars/spire_2.12-0.17.0.jar",
       "System Classpath"
     ],
     [
@@ -5714,7 +5134,7 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/stream-2.9.8.jar",
+      "/opt/spark/jars/stream-2.9.6.jar",
       "System Classpath"
     ],
     [
@@ -5722,11 +5142,11 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/threeten-extra-1.8.0.jar",
+      "/opt/spark/jars/threeten-extra-1.7.1.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/tink-1.16.0.jar",
+      "/opt/spark/jars/tink-1.9.0.jar",
       "System Classpath"
     ],
     [
@@ -5738,47 +5158,27 @@
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/vertx-auth-common-4.5.25.jar",
+      "/opt/spark/jars/xbean-asm9-shaded-4.23.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/vertx-core-4.5.25.jar",
+      "/opt/spark/jars/xz-1.9.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/vertx-web-client-4.5.25.jar",
+      "/opt/spark/jars/zjsonpatch-0.3.0.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/vertx-web-common-4.5.25.jar",
+      "/opt/spark/jars/zookeeper-3.6.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/xbean-asm9-shaded-4.28.jar",
+      "/opt/spark/jars/zookeeper-jute-3.6.3.jar",
       "System Classpath"
     ],
     [
-      "/opt/spark/jars/xmlschema-core-2.3.1.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/xz-1.10.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/zjsonpatch-7.4.1.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/zookeeper-3.9.4.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/zookeeper-jute-3.9.4.jar",
-      "System Classpath"
-    ],
-    [
-      "/opt/spark/jars/zstd-jni-1.5.7-6.jar",
+      "/opt/spark/jars/zstd-jni-1.5.5-4.jar",
       "System Classpath"
     ]
   ],

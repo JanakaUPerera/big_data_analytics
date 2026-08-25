@@ -2,45 +2,45 @@
   "url": "spark://spark-master:7077",
   "workers": [
     {
-      "id": "worker-20260815112055-172.19.0.4-43255",
-      "host": "172.19.0.4",
-      "port": 43255,
-      "webuiaddress": "http://172.19.0.4:8081",
+      "id": "worker-20260825042330-172.20.0.3-41593",
+      "host": "172.20.0.3",
+      "port": 41593,
+      "webuiaddress": "http://172.20.0.3:8081",
       "cores": 2,
-      "coresused": 0,
-      "coresfree": 2,
+      "coresused": 2,
+      "coresfree": 0,
       "memory": 2048,
-      "memoryused": 0,
-      "memoryfree": 2048,
+      "memoryused": 1024,
+      "memoryfree": 1024,
       "resources": {},
       "resourcesused": {},
       "resourcesfree": {},
       "state": "ALIVE",
-      "lastheartbeat": 1786792870697
+      "lastheartbeat": 1787633416107
     },
     {
-      "id": "worker-20260815112055-172.19.0.5-43175",
-      "host": "172.19.0.5",
-      "port": 43175,
-      "webuiaddress": "http://172.19.0.5:8081",
+      "id": "worker-20260825042330-172.20.0.4-40953",
+      "host": "172.20.0.4",
+      "port": 40953,
+      "webuiaddress": "http://172.20.0.4:8081",
       "cores": 2,
-      "coresused": 0,
-      "coresfree": 2,
+      "coresused": 2,
+      "coresfree": 0,
       "memory": 2048,
-      "memoryused": 0,
-      "memoryfree": 2048,
+      "memoryused": 1024,
+      "memoryfree": 1024,
       "resources": {},
       "resourcesused": {},
       "resourcesfree": {},
       "state": "ALIVE",
-      "lastheartbeat": 1786792870707
+      "lastheartbeat": 1787633415992
     }
   ],
   "aliveworkers": 2,
   "cores": 4,
-  "coresused": 0,
+  "coresused": 4,
   "memory": 4096,
-  "memoryused": 0,
+  "memoryused": 2048,
   "resources": [
     {},
     {}
@@ -49,11 +49,10 @@
     {},
     {}
   ],
-  "activeapps": [],
-  "completedapps": [
+  "activeapps": [
     {
-      "id": "app-20260815112101-0000",
-      "starttime": 1786792861516,
+      "id": "app-20260825045000-0004",
+      "starttime": 1787633400785,
       "name": "Web-BerkStan-InDegree-Analysis",
       "cores": 4,
       "user": "spark",
@@ -61,9 +60,67 @@
       "memoryperslave": 1024,
       "resourcesperexecutor": [],
       "resourcesperslave": [],
-      "submitdate": "Sat Aug 15 11:21:01 UTC 2026",
+      "submitdate": "Tue Aug 25 04:50:00 UTC 2026",
+      "state": "RUNNING",
+      "duration": 17604
+    }
+  ],
+  "completedapps": [
+    {
+      "id": "app-20260825042454-0000",
+      "starttime": 1787631894984,
+      "name": "Web-BerkStan-InDegree-Analysis",
+      "cores": 4,
+      "user": "spark",
+      "memoryperexecutor": 1024,
+      "memoryperslave": 1024,
+      "resourcesperexecutor": [],
+      "resourcesperslave": [],
+      "submitdate": "Tue Aug 25 04:24:54 UTC 2026",
       "state": "FINISHED",
-      "duration": 18390
+      "duration": 486326
+    },
+    {
+      "id": "app-20260825043343-0001",
+      "starttime": 1787632423999,
+      "name": "Web-BerkStan-InDegree-Analysis",
+      "cores": 4,
+      "user": "spark",
+      "memoryperexecutor": 1024,
+      "memoryperslave": 1024,
+      "resourcesperexecutor": [],
+      "resourcesperslave": [],
+      "submitdate": "Tue Aug 25 04:33:43 UTC 2026",
+      "state": "FINISHED",
+      "duration": 18299
+    },
+    {
+      "id": "app-20260825043905-0002",
+      "starttime": 1787632745055,
+      "name": "Web-BerkStan-InDegree-Analysis",
+      "cores": 4,
+      "user": "spark",
+      "memoryperexecutor": 1024,
+      "memoryperslave": 1024,
+      "resourcesperexecutor": [],
+      "resourcesperslave": [],
+      "submitdate": "Tue Aug 25 04:39:05 UTC 2026",
+      "state": "FINISHED",
+      "duration": 19191
+    },
+    {
+      "id": "app-20260825044852-0003",
+      "starttime": 1787633332776,
+      "name": "Web-BerkStan-InDegree-Analysis",
+      "cores": 4,
+      "user": "spark",
+      "memoryperexecutor": 1024,
+      "memoryperslave": 1024,
+      "resourcesperexecutor": [],
+      "resourcesperslave": [],
+      "submitdate": "Tue Aug 25 04:48:52 UTC 2026",
+      "state": "FINISHED",
+      "duration": 18143
     }
   ],
   "activedrivers": [],
