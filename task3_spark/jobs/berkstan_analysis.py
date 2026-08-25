@@ -379,8 +379,6 @@ def main():
         indegree_df.unpersist()
         edges_df.unpersist()
 
-        spark.stop()
-
         # Cluster/DAG/shuffle/skew evidence, pulled straight from Spark's own
         # Master and History Server REST APIs now that the run has finished
         # and its event log is finalised.
@@ -394,6 +392,7 @@ def main():
         with open(log_path, "w", encoding="utf-8") as f:
             f.write(log_buffer.getvalue())
         print(f"Driver console log saved to {log_path}")
+        spark.stop()
 
 
 if __name__ == "__main__":
